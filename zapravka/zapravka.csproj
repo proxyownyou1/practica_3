@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2EFD8E1D-769C-48B8-A625-AC5EF1E406BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>zapravka</RootNamespace>
+    <AssemblyName>zapravka</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="connection.cs" />
+    <Compile Include="contact.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="contact.Designer.cs">
+      <DependentUpon>contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="redaktsprav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="redaktsprav.Designer.cs">
+      <DependentUpon>redaktsprav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="spravocnik.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="spravocnik.Designer.cs">
+      <DependentUpon>spravocnik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="toplivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="toplivo.Designer.cs">
+      <DependentUpon>toplivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="uch.Designer.cs">
+      <DependentUpon>uch.cs</DependentUpon>
+    </Compile>
+    <Compile Include="vidtopliva.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="vidtopliva.Designer.cs">
+      <DependentUpon>vidtopliva.cs</DependentUpon>
+    </Compile>
+    <Compile Include="zapravkaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>zapravkaDataSet.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="contact.resx">
+      <DependentUpon>contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="redaktsprav.resx">
+      <DependentUpon>redaktsprav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="spravocnik.resx">
+      <DependentUpon>spravocnik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="toplivo.resx">
+      <DependentUpon>toplivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uch.resx">
+      <DependentUpon>uch.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="vidtopliva.resx">
+      <DependentUpon>vidtopliva.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="zapravkaDataSet.xsc">
+      <DependentUpon>zapravkaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="zapravkaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>zapravkaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="zapravkaDataSet.xss">
+      <DependentUpon>zapravkaDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shell.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ddd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inst.jfif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Без названия.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\telega.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
